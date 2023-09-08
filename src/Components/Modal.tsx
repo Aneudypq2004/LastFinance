@@ -24,7 +24,7 @@ export default function Modal({ children, Description, title }: { children: Reac
             leaveFrom="opacity-100 scale-100 translate-y-0"
             leaveTo="opacity-0 scale-95 -translate-y-96 bg-black">
 
-            <Dialog.Panel className="w-11/12 max-h-screen mt-4  max-w-3xl inset-0 overflow-y-auto bg-white shadow shadow-white rounded-lg  
+            <Dialog.Panel className="w-11/12 h-auto mt-4  max-w-3xl inset-0 overflow-y-auto bg-white shadow shadow-white rounded-lg  
            transform transition-all p-4 ">
 
               <Dialog.Title className="text-center text-naranja uppercase text-2xl" as='h3'>{title}</Dialog.Title>
