@@ -5,7 +5,6 @@ import Modal from "../Components/Modal";
 import useCripto from "../hook/UseCripto";
 import { IconAlertTriangle, IconX } from "@tabler/icons-react";
 import { GetNewId } from "../Helpers";
-import UseUser from "../hook/UseUser";
 
 export default function CardsPage() {
 

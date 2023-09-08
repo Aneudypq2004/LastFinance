@@ -14,7 +14,10 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
             value={{
                 Name,
                 Email,
-                Location
+                Location,
+                setName,
+                setEmail,
+                setLocation
             }}>
 
             {children}

@@ -1,10 +1,7 @@
 import { IconCategory2, IconWallet, IconSettings, IconCreditCard } from '@tabler/icons-react';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
 
 export default function Nav() {
-
-    const [enabled, setEnabled] = useState<boolean>(false);
 
     return (
 

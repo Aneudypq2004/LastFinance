@@ -1,5 +1,7 @@
 // ======================== INTERFACES =====================
 
+import { Dispatch, SetStateAction } from "react";
+
 export interface IcriptoProvider {
     money: number;
     moneyBitcoin: number;
@@ -29,6 +31,9 @@ export interface IuserDefinition {
     Name: string;
     Email: string;
     Location: string;
+    setName?: Dispatch<SetStateAction<string>>
+    setEmail?: Dispatch<SetStateAction<string>>
+    setLocation?: Dispatch<SetStateAction<string>>
 }
 
 // ======================== INITIAL VALUES ======================
