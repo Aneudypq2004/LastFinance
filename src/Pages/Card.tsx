@@ -16,6 +16,7 @@ export default function CardsPage() {
   const [Expiration, setExpiration] = useState<string>("");
   const [Month, setMonth] = useState<string>("");
   const [year, setYear] = useState<string>("");
+  const [codeError, setCodeError] = useState<boolean>(false);
 
   const [error, setError] = useState("");
   const [showBack, setShowBack] = useState<boolean>(false);
@@ -35,7 +36,7 @@ export default function CardsPage() {
 
     let array = [];
 
-    for (let i = 2024; i <= 2050; i++) {
+    for (let i = 2024; i <= 2030; i++) {
       array.push(i);
     }
 
@@ -247,7 +248,15 @@ export default function CardsPage() {
               <input className="w-full border-naranja rounded outline-none border py-2 px-4" id="NumberCard"
                 type="text" placeholder="Number of the Card" required
                 value={NumberCard}
-                onChange={e => setNumberCard(e.target.value)} />
+                onChange={e => {
+
+                  if (!isNaN(+e.target.value)) {
+
+                    setNumberCard(e.target.value)
+
+                  }
+
+                }} />
 
             </fieldset>
 
@@ -265,7 +274,7 @@ export default function CardsPage() {
 
                   onChange={e => setMonth(e.target.value)}>
 
-                  <option disabled>Months</option>
+                  <option disabled value="">Month</option>
 
                   {Months.map((month, i) => (
 
@@ -280,7 +289,7 @@ export default function CardsPage() {
                 <select className="w-full border-naranja rounded border py-2 px-4" id="Expiration" name="year" value={year}
                   onChange={e => setYear(e.target.value)}>
 
-                  <option value="" disabled defaultValue={0}>Year</option>
+                  <option value="" disabled >Year</option>
 
                   {years && years.map(year => (
                     <option key={year} value={year - 2000}> {year} </option>
@@ -298,9 +307,24 @@ export default function CardsPage() {
 
               <label className="uppercase my-2 block  font-bold text-sm text-gray-700" htmlFor="Code">Code</label>
 
-              <input className="w-full border-naranja rounded outline-none border py-2 px-4" id="Code"
+              <input className={`w-full border-naranja rounded outline-none border py-2 px-4 ${codeError ? "outline-red-600 border-none" : ""}`}id="Code"
                 type="text" placeholder="Code eg: 999" maxLength={3}
-                onChange={e => setCodeSecurity(e.target.value)}
+
+                onChange={e => {
+                
+                  if (!isNaN(+e.target.value)) {
+
+                    setCodeSecurity(e.target.value)
+                    setCodeError(false);
+
+                  } else {
+
+                    setCodeError(true);
+
+                  }
+                }
+                }
+
                 onFocus={() => setShowBack(true)}
                 value={CodeSecurity}
               />

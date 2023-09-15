@@ -7,7 +7,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
 
     const [Name, setName] = useState("Luis Aneudy De Los Santos");
     const [Email, setEmail] = useState("");
-    const [Location, setLocation] = useState("Dominican Republic ");
+    const [Location, setLocation] = useState("Dominican Republic");
 
     return (
         <UserContext.Provider

@@ -19,7 +19,15 @@ export default function Settings() {
   const handleSubmit = (e: React.FormEvent) => {
 
     e.preventDefault();
+
+    if (password != repeatPassword) {
+      return toast.error("The password are not equals");
+    }
+
     toast.error("The password is invalid");
+    
+
+
   }
 
   return (
@@ -63,7 +71,7 @@ export default function Settings() {
           <label className="uppercase my-2 block  font-bold text-sm text-white" htmlFor="Password">Password</label>
 
           <input className="w-full border-black rounded outline-none border py-2 px-4" id="Password"
-            type="text" placeholder="Your current password"
+            type="password" placeholder="Your current password"
             value={password}
             onChange={e => setPassword(e.target.value)} />
 
@@ -77,7 +85,7 @@ export default function Settings() {
           <label className="uppercase my-2 block  font-bold text-sm text-white" htmlFor="rPassword">Repeat Password</label>
 
           <input className="w-full border-black rounded outline-none border py-2 px-4" id="rPassword"
-            type="text" placeholder="Repeat Your Password"
+            type="password" placeholder="Repeat Your Password"
             value={repeatPassword}
             onChange={e => setRepeatPassword(e.target.value)} />
 

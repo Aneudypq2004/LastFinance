@@ -20,10 +20,6 @@ export default function Card({ CardData, isShowBack = false }: { CardData: Icard
 
         }
 
-        return () => {
-            console.log("Desmontando");
-        }
-
     }, [isShowBack])
 
     return (
