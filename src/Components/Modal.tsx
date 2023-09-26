@@ -29,7 +29,7 @@ export default function Modal({ children, Description, title }: { children: Reac
 
               <Dialog.Title className="text-center text-naranja uppercase text-2xl" as='h3'>{title}</Dialog.Title>
 
-              <section className=''>
+              <section className='grid justify-center items-center'>
 
                 {Description != undefined}{
 

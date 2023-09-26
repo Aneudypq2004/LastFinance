@@ -123,3 +123,8 @@
   border-radius: 10px;
   border: 1px none #ec8989;
 }
+
+tr > * {
+  padding: 10px ;
+
+}

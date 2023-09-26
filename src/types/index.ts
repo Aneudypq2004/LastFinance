@@ -36,6 +36,18 @@ export interface IuserDefinition {
     setLocation?: Dispatch<SetStateAction<string>>
 }
 
+export interface IapiCripto {
+
+    USD: {
+        DISPLAY: String
+        HIGHDAY: String
+        LOWDAY: String,
+        PRICE:String
+        IMAGEURL: String
+    }
+
+}
+
 // ======================== INITIAL VALUES ======================
 
 export const initialValue: IcriptoProvider = {
