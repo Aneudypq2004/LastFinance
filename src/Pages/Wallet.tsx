@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { Popover } from '@headlessui/react'
 import Spinner from "../Components/Spinner";
 import BarChart from "../Components/BarChat";
-import LineChart from "../Components/LineChart";
 
 
 export default function Wallet() {
