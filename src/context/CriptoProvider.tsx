@@ -11,6 +11,9 @@ const CriptoProvider = ({ children }: { children: ReactNode }) => {
     const [moneyBitcoin, setMoneyBitcoin] = useState<number>(0);
     const [error, setError] = useState({ error: "", active: false });
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [openModalCard, setOpenModalCard] = useState<boolean>(false);
+    const [close, setClose] = useState<boolean>(false);
+  const [notification, setNotification] = useState<boolean>(false);
 
     //HANDLE MODAL 
 
@@ -65,7 +68,13 @@ const CriptoProvider = ({ children }: { children: ReactNode }) => {
                 HandleModal,
                 handleChangeMoney,
                 expanded,
-                HandleExpandSidebar
+                HandleExpandSidebar,
+                openModalCard,
+                setOpenModalCard,
+                close,
+                setClose,
+                notification,
+                setNotification
             }}
         >
 

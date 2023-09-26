@@ -6,10 +6,7 @@ import Modal from "./Modal";
 
 export default function Header() {
 
-  const { HandleModal, money } = useCripto();
-  const [close, setClose] = useState<boolean>(false);
-  const [notification, setNotification] = useState<boolean>(false);
-  const { HandleExpandSidebar } = useCripto();
+  const { HandleModal, money , HandleExpandSidebar,  setOpenModalCard, close, setClose, notification, setNotification} = useCripto();
   const [hour, setHour] = useState<string>("");
 
   // MANAGE MODAL
@@ -18,12 +15,14 @@ export default function Header() {
     HandleModal(true);
     setClose(true);
     setNotification(false);
+    setOpenModalCard(false);
   }
 
   const HandleNotificationModal = () => {
     HandleModal(true);
     setNotification(true);
     setClose(false);
+    setOpenModalCard(false);
   }
 
   // SEARCH THE CRYPTO

@@ -14,6 +14,14 @@ export interface IcriptoProvider {
         error: string;
         active: boolean;
     }
+    openModalCard: boolean;
+
+    close: boolean;
+    notification: boolean;   
+
+    setOpenModalCard: Dispatch<React.SetStateAction<boolean>>;
+    setNotification: Dispatch<React.SetStateAction<boolean>>;
+    setClose: Dispatch<React.SetStateAction<boolean>>;
 }
 
 
@@ -62,7 +70,14 @@ export const initialValue: IcriptoProvider = {
     error: {
         error: "",
         active: false
-    }
+    },
+
+    openModalCard: false,
+    notification: false,
+    close: false,
+    setClose: () => {} ,
+    setOpenModalCard: () => {} ,
+    setNotification: () => {} 
 }
 
 export const userInitialValues: IuserDefinition = {

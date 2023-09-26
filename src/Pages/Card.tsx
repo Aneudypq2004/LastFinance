@@ -68,13 +68,15 @@ export default function CardsPage() {
 
   // SHOW MODAL
 
-  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [] = useState<boolean>(false);
 
-  const { HandleModal } = useCripto();
+  const { HandleModal, openModalCard, setOpenModalCard, setNotification, setClose  } = useCripto();
 
   const handleAddCard = () => {
     HandleModal(true);
-    setOpenModal(true);
+    setOpenModalCard(true);
+    setClose(false);
+    setNotification(false)
   }
 
   // ADD THE NEW CAR TO localStorage
@@ -147,7 +149,7 @@ export default function CardsPage() {
 
     setTimeout(() => {
       HandleModal(false);
-      setOpenModal(false);
+      setOpenModalCard(false);
     }, 1000);
   }
 
@@ -197,7 +199,7 @@ export default function CardsPage() {
 
       {/* MODAL  */}
 
-      {openModal && (
+      {openModalCard && (
 
         <Modal>
 
@@ -343,7 +345,7 @@ export default function CardsPage() {
               <button className="bg-second  font-bold text-xl w-full  text-white px-6 py-3 rounded-lg hover:bg-gray-800
                  transition-all duration-400 uppercase"
                 type="button"
-                onClick={() => { HandleModal(false); setOpenModal(false) }}>Cancel</button>
+                onClick={() => { HandleModal(false); setOpenModalCard(false) }}>Cancel</button>
 
             </div>
           </form>
