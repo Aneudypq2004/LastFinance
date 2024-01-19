@@ -3,7 +3,6 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 // PAGES
 import NotFound from './Pages/NotFound'
 import ProctectedRoutes from './Layout/ProctectedRoutes'
-import Index from './Pages/Index'
 import Settings from './Pages/Settings'
 import CardsPage from './Pages/Card'
 import Wallet from './Pages/Wallet'
