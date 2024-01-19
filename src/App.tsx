@@ -31,19 +31,19 @@ function App() {
 
             <Route path='/' Component={ProctectedRoutes}>
 
-              <Route index Component={Index} />
+              {/* <Route index Component={Index} /> */}
 
-              <Route path='/wallet' Component={Wallet} />
+              <Route index Component={Wallet} />
 
               <Route path='/cards' Component={CardsPage} />
 
               <Route path='/settings' Component={Settings} />
 
+              <Route path='*' Component={NotFound} />
+
             </Route>
 
             {/*  ERROR PAGGE  */}
-
-            <Route path='' Component={NotFound} />
 
           </Routes>
         </CriptoProvider>

@@ -1,4 +1,4 @@
-import { IconCategory2, IconWallet, IconSettings, IconCreditCard } from '@tabler/icons-react';
+import {  IconWallet, IconSettings, IconCreditCard } from '@tabler/icons-react';
 import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
@@ -7,14 +7,8 @@ export default function Nav() {
 
         <nav className="flex flex-col nav gap-3 mt-8">
 
+        
             <NavLink className="px-8 py-2 flex gap-2" to="/" >
-
-                <IconCategory2 />
-                Overview
-
-            </NavLink>
-
-            <NavLink className="px-8 py-2 flex gap-2" to="/wallet" >
 
                 <IconWallet />
                 Wallet
